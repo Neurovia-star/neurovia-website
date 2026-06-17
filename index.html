@@ -9,15 +9,14 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=3">
 </head>
 
-<body>
+<body style="background:none !important;">
 
-<!-- BACKGROUND IMAGE -->
-<div class="bg-image"></div>
-
-<!-- DARK OVERLAY -->
+<video autoplay muted loop playsinline class="video-bg">
+    <source src="image/video/hero-video.mp4.mp4" type="video/mp4">
+</video>
 <div class="overlay"></div>
 
 <!-- FLOATING PARTICLES -->
@@ -35,14 +34,22 @@
         <li>About</li>
         <li>Contact</li>
     </ul>
+
+    <div class="nav-actions">
+        <a href="#" class="auth-btn sign-in">Sign In</a>
+        <a href="#" class="auth-btn sign-up">Sign Up</a>
+    </div>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
 
-    <h1>AI • CYBERSECURITY • CLOUD ENGINEERING</h1>
+    <h1>
+        <span class="hero-word hero-word-main">Upgrade your skills</span>
+        <span class="hero-word hero-word-2">Upgrade your future</span>
+    </h1>
 
-    <p>Build future-ready tech skills with NEUROVIA</p>
+    <p class="hero-subtext">Cybersecurity • AI • Cloud • Automation</p>
 
     <button id="ctaBtn">Explore Courses</button>
 

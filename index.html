@@ -8,6 +8,7 @@
 <title>NEUROVIA</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 <link rel="stylesheet" href="style.css?v=3">
 </head>
@@ -26,23 +27,23 @@
 
 <!-- NAV -->
 <nav>
-    <div class="logo">NEUROVIA</div>
+    <a href="#home" class="logo">NEUROVIA</a>
 
     <ul>
-        <li>Home</li>
-        <li>Courses</li>
-        <li>About</li>
-        <li>Contact</li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
     </ul>
 
     <div class="nav-actions">
-        <a href="#" class="auth-btn sign-in">Sign In</a>
-        <a href="#" class="auth-btn sign-up">Sign Up</a>
+        <a href="#authSection" class="auth-btn sign-in">Sign In</a>
+        <a href="#authSection" class="auth-btn sign-up">Sign Up</a>
     </div>
 </nav>
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero" id="home">
 
     <h1>
         <span class="hero-word hero-word-main">Upgrade your skills</span>
@@ -51,168 +52,141 @@
 
     <p class="hero-subtext">Cybersecurity • AI • Cloud • Automation</p>
 
-    <button id="ctaBtn">Explore Courses</button>
+    <a href="#courses" id="ctaBtn" class="cta-btn">Explore Courses</a>
 
 </section>
 <!-- COURSES SECTION -->
 
-<section class="courses">
+<section class="courses" id="courses">
 
 <h2>OUR COURSES</h2>
+<p id="enrollMessage" class="enroll-message"></p>
 
 <div class="course-container">
 
 <div class="course-card">
-
 <h3>Cybersecurity Mastery</h3>
-
-<p>
-Learn ethical hacking, network defense, SOC operations and penetration testing.
-</p>
-
-<button>
-Enroll Now
-</button>
-
+<p>Learn ethical hacking, network defense, SOC operations, and penetration testing with practical labs.</p>
+<button>Enroll Now</button>
 </div>
 
 <div class="course-card">
+<h3>Ethical Hacking & Bug Bounty</h3>
+<p>Build real-world hacking skills, web app testing, vulnerability scanning, and responsible disclosure techniques.</p>
+<button>Enroll Now</button>
+</div>
 
+<div class="course-card">
 <h3>Cloud Engineering</h3>
-
-<p>
-Master AWS, Azure, networking, cloud deployment and infrastructure automation.
-</p>
-
-<button>
-Enroll Now
-</button>
-
+<p>Master AWS, Azure, networking, deployment, and infrastructure automation for modern tech careers.</p>
+<button>Enroll Now</button>
 </div>
 
 <div class="course-card">
-
 <h3>AI Automation</h3>
-
-<p>
-Build AI workflows, automation systems and modern AI business tools.
-</p>
-
-<button>
-Enroll Now
-</button>
-
+<p>Explore AI workflows, automation tools, and business-ready systems to boost productivity and accuracy.</p>
+<button>Enroll Now</button>
 </div>
 
 <div class="course-card">
-
 <h3>AI Content Creation</h3>
+<p>Create intelligent content, cinematic media, and digital campaigns using modern AI tools.</p>
+<button>Enroll Now</button>
+</div>
 
-<p>
-Create viral AI content, cinematic videos and modern digital media systems.
-</p>
-
-<button>
-Enroll Now
-</button>
-
+<div class="course-card">
+<h3>Digital Skills & Career Growth</h3>
+<p>Strengthen your communication, productivity, and tech confidence with practical learning paths.</p>
+<button>Enroll Now</button>
 </div>
 
 </div>
 
 </section>
-<!-- ABOUT SECTION -->
 
-<section class="about">
-    <!-- TESTIMONIALS SECTION -->
+<section class="about" id="about">
+    <div class="about-content">
+        <h2>ABOUT NEUROVIA</h2>
+        <p>
+            NEUROVIA is a future-focused learning platform that helps students and professionals grow in cybersecurity, cloud, AI, automation, and digital skills.
+        </p>
+        <p>
+            We believe learning should be practical, exciting, and directly connected to real-world opportunities. Our courses are designed to turn curiosity into confidence and skills into career-ready results.
+        </p>
+        <div class="about-benefits">
+            <div><span>✔</span> Hands-on projects</div>
+            <div><span>✔</span> Beginner-friendly learning</div>
+            <div><span>✔</span> Career-focused mentorship</div>
+            <div><span>✔</span> Flexible online access</div>
+        </div>
+    </div>
+</section>
 
 <section class="testimonials">
-    <!-- FAQ SECTION -->
+    <h2>SUCCESS STORIES</h2>
+    <div class="testimonial-container">
+        <div class="testimonial-card">
+            <p>“NEUROVIA helped me understand cybersecurity in a practical way. I finally got confidence in IT.”</p>
+            <h4>- James A.</h4>
+        </div>
+        <div class="testimonial-card">
+            <p>“The cloud training was very clear. I was able to understand AWS basics easily.”</p>
+            <h4>- Sarah K.</h4>
+        </div>
+        <div class="testimonial-card">
+            <p>“AI automation course changed how I think about tech. Very practical and powerful.”</p>
+            <h4>- David O.</h4>
+        </div>
+    </div>
+</section>
 
 <section class="faq">
-
     <h2>FREQUENTLY ASKED QUESTIONS</h2>
-
     <div class="faq-container">
-
         <div class="faq-item">
             <h3>Do I need experience to start?</h3>
             <p>No. NEUROVIA is designed for beginners and advanced learners.</p>
         </div>
-
         <div class="faq-item">
             <h3>Are the courses practical?</h3>
             <p>Yes. Every course is focused on real-world projects and hands-on learning.</p>
         </div>
-
         <div class="faq-item">
             <h3>Will I get a certificate?</h3>
             <p>Yes. You will receive a certificate after completing each course.</p>
         </div>
-
         <div class="faq-item">
             <h3>Can I access the courses anytime?</h3>
             <p>Yes. Courses are available online and accessible 24/7.</p>
         </div>
-
     </div>
-
 </section>
 
-    <h2>SUCCESS STORIES</h2>
-
-    <div class="testimonial-container">
-
-        <div class="testimonial-card">
-            <p>
-                “NEUROVIA helped me understand cybersecurity in a practical way. I finally got confidence in IT.”
-            </p>
-            <h4>- James A.</h4>
-        </div>
-
-        <div class="testimonial-card">
-            <p>
-                “The cloud training was very clear. I was able to understand AWS basics easily.”
-            </p>
-            <h4>- Sarah K.</h4>
-        </div>
-
-        <div class="testimonial-card">
-            <p>
-                “AI automation course changed how I think about tech. Very practical and powerful.”
-            </p>
-            <h4>- David O.</h4>
-        </div>
-
-    </div>
-
-</section>
-
-    <div class="about-content">
-
-        <h2>ABOUT NEUROVIA</h2>
-
-        <p>
-            Neurovia blends innovative course design with practical training so learners can apply tech skills immediately.
-        </p>
-
-        <p>
-            We help students and professionals master cybersecurity, cloud, AI, automation, and digital content creation with real-world projects and career-focused training.
-        </p>
-
-    </div>
-
-</section>
-<!-- CONTACT SECTION -->
-
-<section class="contact">
-
+<section class="contact" id="contact">
     <h2>CONTACT NEUROVIA</h2>
-
-    <p>Email: abrahambreezy81@gmail.com</p>
-
+    <div class="contact-links">
+        <a href="mailto:abrahambreezy81@gmail.com"><i class="fa-solid fa-envelope"></i> abrahambreezy81@gmail.com</a>
+        <a href="https://wa.me/2349155928051"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+        <a href="https://t.me/yourtelegramhandle"><i class="fa-brands fa-telegram"></i> Telegram</a>
+        <a href="https://www.instagram.com/yourinstagramhandle/"><i class="fa-brands fa-instagram"></i> Instagram</a>
+    </div>
     <p>We respond within 24–48 hours.</p>
+</section>
 
+<section class="auth-section" id="authSection">
+    <div class="auth-box">
+        <h2>Sign In / Sign Up</h2>
+        <div class="auth-inputs">
+            <input type="email" id="email" placeholder="Email address">
+            <input type="password" id="password" placeholder="Password">
+        </div>
+        <div class="auth-buttons">
+            <button id="signUpBtn">Sign Up</button>
+            <button id="loginBtn">Login</button>
+            <button id="signOutBtn" class="sign-out-btn">Sign Out</button>
+        </div>
+        <p id="authMessage" class="auth-message"></p>
+    </div>
 </section>
 
 <!-- FOOTER -->
@@ -223,12 +197,22 @@ Enroll Now
 
 </footer>
 
-<!-- FLOATING CHAT BUTTON -->
+<!-- FLOATING SOCIAL CHAT -->
+<div class="chat-panel">
+    <a href="https://www.instagram.com/" class="chat-option instagram" target="_blank" aria-label="Instagram">
+        📷
+    </a>
+    <a href="https://t.me/" class="chat-option telegram" target="_blank" aria-label="Telegram">
+        ✈️
+    </a>
+    <a href="https://wa.me/2349155928051" class="chat-option whatsapp" target="_blank" aria-label="WhatsApp">
+        💬
+    </a>
+</div>
 
-<a href="https://wa.me/2349155928051" class="chat-button" target="_blank">
-    💬 Chat With Us
+<a href="#" class="chat-button" id="chatToggle" aria-label="Open chat options">
+    💬
 </a>
-<script src="script.js"></script>
-
+<script type="module" src="script.js"></script>
 </body>
 </html>

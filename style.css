@@ -4,6 +4,10 @@ padding:0;
 box-sizing:border-box;
 }
 
+html {
+    scroll-behavior:smooth;
+}
+
 html, body {
     width:100%;
     min-height:100%;
@@ -105,7 +109,9 @@ gap:30px;
 list-style:none;
 }
 
-nav ul li{
+nav ul li a{
+color:#fff;
+text-decoration:none;
 cursor:pointer;
 transition:0.3s;
 font-size:0.95rem;
@@ -113,9 +119,18 @@ letter-spacing:0.08em;
 text-transform:uppercase;
 }
 
-nav ul li:hover{
+nav ul li a:hover{
 color:#00F5FF;
 text-shadow:0 0 10px rgba(0,245,255,0.35);
+}
+
+.logo{
+font-family:'Orbitron', sans-serif;
+font-size:26px;
+color:#00F5FF;
+letter-spacing:3px;
+text-shadow:0 0 12px rgba(0,245,255,0.35);
+text-decoration:none;
 }
 
 .nav-actions{
@@ -248,7 +263,8 @@ padding:20px;
 }
 
 /* BUTTON */
-button{
+button,
+.cta-btn{
 margin-top:30px;
 padding:15px 40px;
 border:none;
@@ -257,10 +273,13 @@ background:linear-gradient(90deg,#00F5FF,#7B2EFF);
 color:white;
 font-size:1rem;
 cursor:pointer;
+text-decoration:none;
+display:inline-block;
 transition:0.3s;
 }
 
-button:hover{
+button:hover,
+.cta-btn:hover{
 transform:scale(1.05);
 box-shadow:0 0 25px rgba(0,245,255,0.6);
 }
@@ -368,6 +387,26 @@ color:#ddd;
 margin-bottom:18px;
 }
 
+.about-benefits{
+display:grid;
+grid-template-columns:repeat(2, minmax(0, 1fr));
+gap:12px;
+margin-top:18px;
+}
+
+.about-benefits div{
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.08);
+border-radius:12px;
+padding:12px 14px;
+color:#e8faff;
+font-size:0.92rem;
+}
+
+.about-benefits span{
+color:#00F5FF;
+margin-right:8px;
+}
 
 .course-card h3{
 font-family:'Orbitron', sans-serif;
@@ -384,6 +423,77 @@ margin-bottom:25px;
 
 .course-card button{
 width:100%;
+}
+
+.enroll-message{
+min-height:24px;
+text-align:center;
+color:#b9f7e6;
+margin-bottom:18px;
+font-size:0.95rem;
+}
+
+.auth-section{
+padding:100px 8%;
+position:relative;
+z-index:2;
+}
+
+.auth-box{
+max-width:520px;
+margin:0 auto;
+background:rgba(255,255,255,0.06);
+border:1px solid rgba(255,255,255,0.1);
+backdrop-filter:blur(12px);
+border-radius:18px;
+padding:32px 24px;
+box-shadow:0 0 30px rgba(0,245,255,0.08);
+}
+
+.auth-box h2{
+font-family:'Orbitron', sans-serif;
+font-size:1.8rem;
+text-align:center;
+color:#00F5FF;
+margin-bottom:18px;
+}
+
+.auth-inputs{
+display:flex;
+flex-direction:column;
+gap:12px;
+}
+
+.auth-inputs input{
+padding:14px 16px;
+border-radius:12px;
+border:1px solid rgba(255,255,255,0.12);
+background:rgba(0,0,0,0.3);
+color:#fff;
+outline:none;
+}
+
+.auth-buttons{
+display:flex;
+gap:10px;
+justify-content:center;
+margin-top:16px;
+}
+
+.auth-buttons button{
+margin-top:0;
+}
+
+.sign-out-btn{
+display:none;
+background:linear-gradient(90deg,#ff5d73,#ff8a5b);
+}
+
+.auth-message{
+min-height:22px;
+text-align:center;
+margin-top:14px;
+font-size:0.92rem;
 }
 /* TESTIMONIALS */
 
@@ -490,6 +600,30 @@ color:#00F5FF;
 margin-bottom:20px;
 }
 
+.contact-links{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:12px;
+margin:18px 0;
+}
+
+.contact-links a{
+color:#eefcff;
+text-decoration:none;
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.08);
+border-radius:999px;
+padding:12px 16px;
+transition:0.3s;
+}
+
+.contact-links a:hover{
+color:#00F5FF;
+transform:translateY(-2px);
+box-shadow:0 0 18px rgba(0,245,255,0.18);
+}
+
 .contact p{
 color:#cccccc;
 margin:10px 0;
@@ -507,16 +641,66 @@ margin-top:50px;
 
 /* CHAT BUTTON */
 
+.chat-panel{
+position:fixed;
+bottom:90px;
+right:20px;
+display:flex;
+flex-direction:column;
+gap:12px;
+z-index:998;
+opacity:0;
+pointer-events:none;
+transform:translateY(15px);
+transition:0.3s ease;
+}
+
+.chat-panel.open{
+opacity:1;
+pointer-events:auto;
+transform:translateY(0);
+}
+
+.chat-option{
+width:56px;
+height:56px;
+display:grid;
+place-items:center;
+text-decoration:none;
+color:#fff;
+font-size:1.2rem;
+border-radius:50%;
+box-shadow:0 0 18px rgba(0,0,0,0.35);
+transition:0.3s;
+}
+
+.chat-option:hover{
+transform:translateY(-3px) scale(1.05);
+}
+
+.chat-option.instagram{
+background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af,#515bd4);
+}
+
+.chat-option.telegram{
+background:linear-gradient(90deg,#2AABEE,#229ED9);
+}
+
+.chat-option.whatsapp{
+background:linear-gradient(90deg,#25D366,#128C7E);
+}
+
 .chat-button{
 position:fixed;
 bottom:20px;
 right:20px;
 background:linear-gradient(90deg,#00F5FF,#7B2EFF);
 color:white;
-padding:15px 20px;
+padding:15px 18px;
 border-radius:50px;
 text-decoration:none;
 font-weight:bold;
+font-size:1rem;
 box-shadow:0 0 20px rgba(0,245,255,0.3);
 transition:0.3s;
 z-index:999;
@@ -525,6 +709,18 @@ z-index:999;
 .chat-button:hover{
 transform:scale(1.1);
 }
+
+.clicked-bounce{
+animation:bouncePulse 0.45s ease;
+}
+
+@keyframes bouncePulse{
+0% { transform: scale(1); }
+40% { transform: scale(0.94) translateY(1px); }
+70% { transform: scale(1.04); }
+100% { transform: scale(1); }
+}
+
 .video-bg{
 position:fixed;
 top:0;

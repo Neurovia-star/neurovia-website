@@ -132,6 +132,7 @@ export function LoadingProvider({ children }: { children: ReactNode }) {
           {!finished ? (
             <motion.div
               key="loader"
+              data-boot-loader=""
               className="fixed inset-0 z-[200] flex flex-col items-center justify-center overflow-hidden bg-[#01020a]"
               exit={{ opacity: 0, scale: 1.06 }}
               transition={{ duration: 0.9, ease: [0.4, 0, 0.2, 1] }}

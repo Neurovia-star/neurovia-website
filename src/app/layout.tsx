@@ -58,6 +58,17 @@ export default function RootLayout({
       className={`${sora.variable} ${spaceGrotesk.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-night-950 text-foreground">
+        {/* Runs before first paint: hides the boot loader for returning
+            visitors so the server-rendered frame never flashes.
+            Key must match SEEN_KEY in components/LoadingScreen.tsx.
+            The style is inlined (not in globals.css) so it applies at parse
+            time, independent of stylesheet load timing. */}
+        <style>{`html[data-boot-seen] [data-boot-loader]{display:none}`}</style>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try{if(localStorage.getItem("neurovia-loader-seen")==="1")document.documentElement.setAttribute("data-boot-seen","")}catch(e){}`,
+          }}
+        />
         {children}
       </body>
     </html>

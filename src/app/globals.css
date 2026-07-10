@@ -68,6 +68,12 @@ body {
   background: #22345c;
 }
 
+/* Boot loader: hidden pre-hydration for visitors who have already seen it
+   (attribute set by the inline script in layout.tsx) */
+html[data-boot-seen] [data-boot-loader] {
+  display: none;
+}
+
 /* ---------- Reusable component classes ---------- */
 
 .glass {

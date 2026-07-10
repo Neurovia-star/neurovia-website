@@ -15,14 +15,18 @@
 
 <body style="background:none !important;">
 
-<video autoplay muted loop playsinline class="video-bg">
-    <source src="image/video/hero-video.mp4.mp4" type="video/mp4">
-</video>
-<div class="overlay"></div>
+    <!-- Video Background -->
+    <video autoplay muted loop playsinline preload="auto" class="video-bg">
+        <source src="image/video/robot-background.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
 
-<!-- FLOATING PARTICLES -->
+    <!-- Dark Overlay -->
+    <div class="overlay"></div>
+
+<!-- FLOATING GRADUATION HATS -->
 <div class="particles">
-    <span></span><span></span><span></span><span></span><span></span>
+    <span>🎓</span><span>🎓</span><span>🎓</span><span>🎓</span><span>🎓</span>
 </div>
 
 <!-- NAV -->
@@ -44,22 +48,25 @@
 
 <!-- HERO -->
 <section class="hero" id="home">
+    <div class="hero-badge">AI-Driven Learning Hub</div>
 
     <h1>
-        <span class="hero-word hero-word-main">Upgrade your skills</span>
-        <span class="hero-word hero-word-2">Upgrade your future</span>
+        <span class="hero-word hero-word-main">Build the Future</span>
+        <span class="hero-word hero-word-2">With Smart Skills</span>
     </h1>
 
-    <p class="hero-subtext">Cybersecurity • AI • Cloud • Automation</p>
+    <p class="hero-subtext">Cybersecurity • AI • Cloud • Automation • Digital Growth</p>
 
-    <a href="#courses" id="ctaBtn" class="cta-btn">Explore Courses</a>
-
+    <div class="hero-actions">
+        <a href="#courses" id="ctaBtn" class="cta-btn">Explore Programs</a>
+        <a href="#aiAssistant" class="cta-btn secondary">Ask Neuro AI</a>
+    </div>
 </section>
 <!-- COURSES SECTION -->
 
 <section class="courses" id="courses">
 
-<h2>OUR COURSES</h2>
+<h2>Featured Learning Paths</h2>
 <p id="enrollMessage" class="enroll-message"></p>
 
 <div class="course-container">
@@ -67,37 +74,44 @@
 <div class="course-card">
 <h3>Cybersecurity Mastery</h3>
 <p>Learn ethical hacking, network defense, SOC operations, and penetration testing with practical labs.</p>
-<button>Enroll Now</button>
+<a href="cybersecurity.html" class="btn">View Program</a>
 </div>
 
 <div class="course-card">
 <h3>Ethical Hacking & Bug Bounty</h3>
 <p>Build real-world hacking skills, web app testing, vulnerability scanning, and responsible disclosure techniques.</p>
-<button>Enroll Now</button>
+<a href="ethical-hacking.html" class="btn">View Program</a>
 </div>
 
 <div class="course-card">
 <h3>Cloud Engineering</h3>
 <p>Master AWS, Azure, networking, deployment, and infrastructure automation for modern tech careers.</p>
-<button>Enroll Now</button>
+<a href="cloud-engineering.html" class="btn">View Program</a>
+</div>
+
+<div class="course-card">
+<span class="course-badge">New</span>
+<h3>Network Engineering</h3>
+<p>Learn routing, switching, troubleshooting, and secure network design for homes, businesses, and enterprise environments.</p>
+<a href="network-engineering.html" class="btn">View Program</a>
 </div>
 
 <div class="course-card">
 <h3>AI Automation</h3>
 <p>Explore AI workflows, automation tools, and business-ready systems to boost productivity and accuracy.</p>
-<button>Enroll Now</button>
+<a href="ai-automation.html" class="btn">View Program</a>
 </div>
 
 <div class="course-card">
 <h3>AI Content Creation</h3>
 <p>Create intelligent content, cinematic media, and digital campaigns using modern AI tools.</p>
-<button>Enroll Now</button>
+<a href="ai-content-creation.html" class="btn">View Program</a>
 </div>
 
 <div class="course-card">
 <h3>Digital Skills & Career Growth</h3>
 <p>Strengthen your communication, productivity, and tech confidence with practical learning paths.</p>
-<button>Enroll Now</button>
+<a href="digital-skills.html" class="btn">View Program</a>
 </div>
 
 </div>
@@ -106,24 +120,24 @@
 
 <section class="about" id="about">
     <div class="about-content">
-        <h2>ABOUT NEUROVIA</h2>
+        <h2>Why Neurovia</h2>
         <p>
             NEUROVIA is a future-focused learning platform that helps students and professionals grow in cybersecurity, cloud, AI, automation, and digital skills.
         </p>
         <p>
-            We believe learning should be practical, exciting, and directly connected to real-world opportunities. Our courses are designed to turn curiosity into confidence and skills into career-ready results.
+            We blend practical labs, real-world projects, and AI-guided mentorship to help you move from curiosity to career-ready confidence.
         </p>
         <div class="about-benefits">
-            <div><span>✔</span> Hands-on projects</div>
-            <div><span>✔</span> Beginner-friendly learning</div>
-            <div><span>✔</span> Career-focused mentorship</div>
-            <div><span>✔</span> Flexible online access</div>
+            <div><span>✔</span> Hands-on labs</div>
+            <div><span>✔</span> Adaptive learning</div>
+            <div><span>✔</span> 1:1 mentorship</div>
+            <div><span>✔</span> Career acceleration</div>
         </div>
     </div>
 </section>
 
 <section class="testimonials">
-    <h2>SUCCESS STORIES</h2>
+    <h2>Student Success Stories</h2>
     <div class="testimonial-container">
         <div class="testimonial-card">
             <p>“NEUROVIA helped me understand cybersecurity in a practical way. I finally got confidence in IT.”</p>
@@ -141,7 +155,7 @@
 </section>
 
 <section class="faq">
-    <h2>FREQUENTLY ASKED QUESTIONS</h2>
+    <h2>Frequently Asked Questions</h2>
     <div class="faq-container">
         <div class="faq-item">
             <h3>Do I need experience to start?</h3>
@@ -163,7 +177,7 @@
 </section>
 
 <section class="contact" id="contact">
-    <h2>CONTACT NEUROVIA</h2>
+    <h2>Contact Neurovia</h2>
     <div class="contact-links">
         <a href="mailto:abrahambreezy81@gmail.com"><i class="fa-solid fa-envelope"></i> abrahambreezy81@gmail.com</a>
         <a href="https://wa.me/2349155928051"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
@@ -175,7 +189,7 @@
 
 <section class="auth-section" id="authSection">
     <div class="auth-box">
-        <h2>Sign In / Sign Up</h2>
+        <h2>Launch Your Account</h2>
         <div class="auth-inputs">
             <input type="email" id="email" placeholder="Email address">
             <input type="password" id="password" placeholder="Password">
@@ -196,6 +210,24 @@
     <p>© 2026 NEUROVIA. All Rights Reserved.</p>
 
 </footer>
+
+<section class="ai-assistant" id="aiAssistant">
+    <div class="assistant-panel">
+        <div class="assistant-header">
+            <span class="assistant-dot"></span>
+            <h3>Neuro AI Assistant</h3>
+        </div>
+        <div class="assistant-chat">
+            <div class="assistant-message ai">Hi! I can help you choose a NEUROVIA program based on your goal, budget, or experience level.</div>
+            <div class="assistant-message user">What program fits a beginner in tech?</div>
+            <div class="assistant-message ai">Start with Digital Skills & Career Growth for a practical first step, or AI Automation if you want a more technical path.</div>
+        </div>
+        <div class="assistant-input-row">
+            <input id="assistantInput" type="text" placeholder="Ask Neuro AI anything...">
+            <button id="assistantSendBtn" type="button">Send</button>
+        </div>
+    </div>
+</section>
 
 <!-- FLOATING SOCIAL CHAT -->
 <div class="chat-panel">

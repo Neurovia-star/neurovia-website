@@ -55,6 +55,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      // The boot-loader inline script stamps data-boot-seen on <html> before
+      // hydration; suppress the expected attribute-mismatch warning (same
+      // pattern as dark-mode theme scripts). Applies to this element only.
+      suppressHydrationWarning
       className={`${sora.variable} ${spaceGrotesk.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-night-950 text-foreground">

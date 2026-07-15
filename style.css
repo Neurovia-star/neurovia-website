@@ -759,10 +759,6 @@ transition:0.3s;
 transform:translateY(-3px) scale(1.05);
 }
 
-.chat-option.instagram{
-background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af,#515bd4);
-}
-
 .chat-option.telegram{
 background:linear-gradient(90deg,#2AABEE,#229ED9);
 }

@@ -95,10 +95,8 @@ const siteHighlights = [
 ];
 
 const contactInfo = {
-    email: "abrahambreezy81@gmail.com",
     whatsapp: "https://wa.me/2349155928051",
-    telegram: "https://t.me/yourtelegramhandle",
-    instagram: "https://www.instagram.com/yourinstagramhandle/"
+    telegram: "https://t.me/yourtelegramhandle"
 };
 
 const showMessage = (message, isError = false) => {
@@ -229,7 +227,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         if (q.includes("contact") || q.includes("reach") || q.includes("support")) {
-            return `You can reach NEUROVIA at ${contactInfo.email} or through WhatsApp: ${contactInfo.whatsapp}.`;
+            return `You can reach NEUROVIA through WhatsApp: ${contactInfo.whatsapp} or Telegram: ${contactInfo.telegram}.`;
         }
 
         if (q.includes("price") || q.includes("cost") || q.includes("fee") || q.includes("payment")) {

@@ -361,9 +361,38 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const bgVideo = document.querySelector(".video-bg");
     if (bgVideo) {
+        bgVideo.setAttribute("muted", "");
+        bgVideo.setAttribute("playsinline", "");
+        bgVideo.setAttribute("webkit-playsinline", "");
+        bgVideo.setAttribute("autoplay", "");
+        bgVideo.setAttribute("loop", "");
+        bgVideo.setAttribute("preload", "auto");
         bgVideo.muted = true;
         bgVideo.loop = true;
         bgVideo.playsInline = true;
-        try { bgVideo.load(); bgVideo.play().catch(() => {}); } catch(e) {}
+
+        const startVideo = () => {
+            try {
+                bgVideo.load();
+                bgVideo.play();
+            } catch (e) {
+                // ignore playback failure until user interaction
+            }
+        };
+
+        startVideo();
+        setTimeout(startVideo, 300);
+
+        document.addEventListener("touchstart", () => {
+            if (bgVideo.paused) {
+                bgVideo.play().catch(() => {});
+            }
+        }, { once: true, passive: true });
+
+        document.addEventListener("click", () => {
+            if (bgVideo.paused) {
+                bgVideo.play().catch(() => {});
+            }
+        }, { once: true, passive: true });
     }
 });

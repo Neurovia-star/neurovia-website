@@ -198,6 +198,36 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    const navToggle = document.getElementById("navToggle");
+    const navElement = document.querySelector("nav");
+
+    if (navToggle && navElement) {
+        navToggle.addEventListener("click", () => {
+            const isOpen = navElement.classList.toggle("open");
+            navToggle.setAttribute("aria-expanded", String(isOpen));
+        });
+    }
+
+    const closeMobileNav = () => {
+        if (navElement && navElement.classList.contains("open")) {
+            navElement.classList.remove("open");
+            if (navToggle) navToggle.setAttribute("aria-expanded", "false");
+        }
+    };
+
+    document.querySelectorAll("nav ul li a, .nav-actions a").forEach((link) => {
+        link.addEventListener("click", closeMobileNav);
+    });
+
+    document.addEventListener("click", (event) => {
+        if (!navElement || !navElement.classList.contains("open")) return;
+        const target = event.target;
+        if (!(target instanceof Element)) return;
+        if (!navElement.contains(target) && target !== navToggle) {
+            closeMobileNav();
+        }
+    });
+
     const addAssistantMessage = (text, sender = "ai") => {
         if (!assistantChat) return;
         const message = document.createElement("div");
